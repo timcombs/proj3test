@@ -1,0 +1,13 @@
+{
+  "name": "louis_project_3",
+  "version": "1.0.0",
+  "description": "Project open classrooms 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "sass": "sass --watch ./scss/main.scss:./prefix/main.css",
+    "prefix": "postcss -w ./prefix/main.css --use autoprefixer -d ./dist/css/"
+  },
+  "author": "Louis Galvan",
+  "license": "ISC"
+}

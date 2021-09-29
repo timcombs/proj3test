@@ -1,0 +1,437 @@
+@import "effects";
+@import "variables";
+
+html {
+  box-sizing: border-box;
+}
+li {
+  hyphens: auto;
+}
+body {
+  margin: 0 auto;
+  font-family: roboto;
+}
+.header {
+  text-align: center;
+  position: relative;
+  background-color: $background-clr;
+
+  &__logo {
+    padding: 0.9rem 0;
+    background-color: white;
+  }
+
+  &__explore {
+    background-color: $background-clr;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    align-items: center;
+  }
+  &__location {
+    background-color: #e5e5e5;
+    border: inset 0.1rem $background-clr;
+    margin-top: 0;
+    padding: 1rem 0 1rem 0;
+  }
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  &__img img {
+    height: 15rem;
+    object-fit: cover;
+    width: 100%;
+  }
+  &__button {
+    padding: 1rem;
+  }
+  &__navigation {
+    position: relative;
+  }
+  &__arrow  {
+    position: absolute;
+    top: 19px;
+    left: 10px;
+    color: black;
+  }
+ }
+ .header i {
+   margin-right: 1rem;
+ }
+
+.btn {
+  border: 0px solid;
+  background-image: linear-gradient($main-clr 0%,$border-clr 100%);
+  border-radius: 3rem;
+  color: white;
+  display: inline-block;
+  font-family: roboto;
+  font-size: 1rem;
+  height: 3.2rem;
+  line-height: 0.4rem;
+  padding: 1.5rem;
+  width: 14rem;
+  &:hover {
+    transition-duration: 500ms;
+  box-shadow: -1px 4px 10px 5px rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(#ff88de, #9b63df);
+  }
+
+&__order  {
+  height: 3rem;
+  line-height: 0.2rem;
+  margin: 6rem;
+  width: 11rem;
+  }
+}
+
+  .nav__card {
+  background-color: $background-clr;
+  border-radius: 1.4rem;
+  box-shadow: -1px 7px 15px 5px;
+  height: 4.5rem;
+  width: 20rem;
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  margin: 1.5rem auto;
+}
+
+.nav__card:hover {
+  background-color: #f2eafb;
+  box-shadow: -1px 7px 15px 5px rgba(0, 0, 0, 0.15);
+}
+.nav__card:hover .fas {
+  color: black;
+}
+.nav__list {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  display: block;
+
+}
+.main {
+  background-color: #f2f2f2;
+  border-radius: 2.5rem 2.5rem 0 0;
+  margin-top: -2.5rem;
+  position: relative;
+  
+  &__title  {
+    font-family: shrikhand;
+   }
+  &__icon {
+    background-color: #f2f2f2;
+    float: right;
+    font-size: 2rem;
+    font-weight: 200;
+    position: relative;
+    right: 2rem;
+  }
+  &__menu__background {
+    background-color: $background-clr;
+    border-radius: 2.5rem 2.5rem 0 0;
+    margin-top: -2.5rem;
+    position: relative;
+  }
+  &__menu__background h1 {
+    margin-left: 2rem;
+    padding-top: 1.4rem;
+  }
+  &__menu__background h2 {
+    margin-left: 2rem;
+    padding: 1rem;
+  }
+  &__menu__background h2 span {
+   border-bottom: 3px solid #99e2d0;
+  }
+  
+}
+.menu {
+  background-color: #f2f2f2;
+  flex-direction: column;
+
+  h2 {
+    margin-left: 2rem;
+  }
+  &__wrap {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  &__item {
+    background-color: white;
+    box-shadow: 1px 5px 5px 4px rgba($color: #b9b5b5, $alpha: 1.0);
+    border-radius: 1rem;
+    height: 3.25rem;
+    line-height: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    width: 19rem;
+    display: flex;
+    overflow: hidden;
+  }
+  &__price  {
+    width: 25%;
+    flex: none;
+    padding-top: 1.6rem;
+    text-align: center;
+  }
+  &__text {
+    flex: none;
+    width: 75%;
+    transition: width 1s ease-out;
+  }
+  &__text h3  {
+    font-size: 0.9rem;
+    font-weight: 900;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: 'Roboto', sans-serif;
+  }
+  &__text h4  {
+    font-size: 0.795rem;
+    font-weight: 100;
+    position: relative;
+    bottom: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: grey;
+  }
+}
+.overlay  {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  bottom: 4.8rem;
+  right: 0;
+  background-color: #99e2d0;
+  border-radius: 0 1rem 1rem 0;
+  height: 4.25rem;
+  overflow: hidden;
+}
+.check  {
+  color: white;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  transform: rotate(360deg);
+  transition: transform 1s;
+}
+.menu__item:hover {
+  cursor: pointer;
+
+  .menu__text {
+    width: 55%;
+    transition: width 1s ease-in-out;
+  }
+  .check  {
+    transition: transform 1s;
+    transform: rotate(-360deg);
+  }
+}
+.title {
+  font-size: 1.5rem;
+  font-family: roboto;
+  font-weight: 600;
+  margin-left: 0.8rem;
+}
+.icon__number {
+  position: relative;
+  right: 0.75rem;
+}
+.icon__number {
+  align-items: center;
+  background-color: $border-clr;
+  border-radius: 2rem;
+  color: white;
+  display: flex;
+  font-size: 0.8rem;
+  height: 1.5rem;
+  justify-content: center;
+  width: 1.5rem;
+}
+.nav__title {
+  text-align: left;
+  margin-left: 0.8rem;
+}
+
+.icon__new  {
+  border-radius: .10rem;
+  color: green;
+  background-color: #99E2D0;
+  text-align: center;
+  font-weight: 500;
+  padding: 1rem 0;
+  top: 0;
+  right: 5%;
+  width: 5rem;
+  position: absolute;
+}
+.card {
+
+&__text {
+  padding: 0 1rem;
+  line-height: 0.5rem;
+}
+&__restaurant {
+  background-color: white;
+  border-radius: 1rem;
+  height: 15rem;
+  width: 20rem;
+  position: relative;
+  box-shadow: -1px 6px 13px 6px rgb(97, 97, 97);
+  }
+  &__restaurant img {
+    border-radius: 1rem 1rem 0rem 0rem;
+    height: 10rem;
+    object-fit: cover;
+    position: relative;
+    width: 20rem;
+  }
+  &__icon {
+    background-color: white;
+    font-size: 1.7rem;
+    position: absolute;
+    top: 12rem;
+    left: 17rem;
+    width: 2rem;
+  }
+  &__heart  {
+      background-color: white;
+      font-size: 2rem;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: 2rem;
+  }
+  &__icon--empty {
+    opacity: 1; 
+    transition: opacity 0.5s ease;
+    position:absolute;
+  }
+  &__icon--full {
+    position: absolute;
+    background: -webkit-linear-gradient(#9356dc, #ff79da);
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+  }
+  &__icon:hover{
+    .card__icon--empty {
+      transition: opacity 0.5s ease;
+      opacity: 0;
+    }
+    .card__icon--full  {
+      transition: opacity 0.5s ease;
+      opacity: 1;
+    }
+  }
+  &__heart--empty {
+    opacity: 1; 
+    transition: opacity 0.5s ease;
+    position:absolute;
+  }
+  &__heart--full {
+    position: absolute;
+    background: -webkit-linear-gradient(#9356dc, #ff79da);
+    background-clip:text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+  }
+  &__heart:hover{
+    .card__heart--empty {
+      transition: opacity 0.5s ease;
+      opacity: 0;
+    }
+    .card__heart--full  {
+      transition: opacity 0.5s ease;
+      opacity: 1;
+    }
+  }
+}
+.restaurant__section {
+  background-color: $background-clr;
+  margin-top: 3rem;
+  padding-bottom: 5rem;
+  padding-top: 1rem;
+}
+.restaurant__section .container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+}
+.restaurant__section {
+  a {
+  text-decoration: none;
+  color: black;
+  }
+}
+h3 {
+  font-weight: 900;
+  font-family: sans-serif, 'Roboto';
+}
+.button {
+  justify-content: center;
+  background-color: #f2f2f2;
+  display: flex;
+  }
+
+footer .container{
+display: flex;
+flex-direction: column;
+height: 12rem;
+padding-left: 1rem;
+padding-bottom: 2rem;
+justify-content: space-around;
+background-color: #252525;
+gap: 0.5rem;
+}
+.container__icon  {
+  width: 30px;
+}
+footer a{
+  color: #f2f2f2;
+  text-decoration: none;
+}
+.footer__title  {
+  font-family: shrikhand;
+}
+@media only screen and (min-width: 1040px) {
+  .menu__section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .menu__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  footer .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+ .main__menu__background h2  {
+  text-align: center;
+ 
+  }
+}
